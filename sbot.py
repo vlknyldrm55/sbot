@@ -93,7 +93,7 @@ class M3UGenerator:
         
         print(f"Total channels added: {found_channels}")
     
-    def save_m3u(self, filename="DeaTHLesS-Selcuksport.m3u"):
+    def save_m3u(self, filename="sbot.m3u"):
         try:
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(self.m3u_content)
