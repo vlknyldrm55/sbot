@@ -1,48 +1,27 @@
-# sbot.py – Selcuksports M3U Generator
+# sbot.py – DeaTHLesS M3U Generator
 
-Bu Python scripti, SelcuksportsHD yayınlarını otomatik olarak tarar ve `.m3u` formatında oynatıcıya uygun bir liste oluşturur.
+Bu Python scripti, aşağıdaki 3 kaynaktan yayınları otomatik olarak tarar ve `.m3u` formatında bir liste oluşturur:
 
-## 🚀 Özellikler
+- ✅ SelcuksportsHD
+- ✅ BirazcıkSpor
+- ✅ BilyonerSport
 
-- Güncel aktif domaini otomatik bulur
-- Tüm Bein, Smart, Tivibu ve S Sport kanallarını listeler
-- M3U dosyasını `sbot.m3u` olarak kaydeder
+Oluşturulan liste `sbot.m3u` dosyasına kaydedilir. Script mobil ve PC ortamlarında çalışacak şekilde optimize edilmiştir.
 
-## ⚙️ Gereksinimler
+## Dosyalar
+
+- `sbot.py` → Ana bot scripti (3 kaynaklı)
+- `sbot.m3u` → Oluşturulan yayın listesi
+- `upload.py` → M3U dosyasını sunucuya veya cihaza aktarmak için yardımcı script
+
+## Özellikler
+
+- Otomatik domain bulma ve stream link çıkarma
+- Mobil uyumlu dosya kaydetme
+- HTML arayüz desteği (isteğe bağlı)
+- Otomatik zamanlama (Tasker, Termux, Windows Scheduler ile uyumlu)
+
+## Kullanım
 
 ```bash
-pip install requests
-
-🧪 Kullanım
-
-`bash
 python sbot.py
-`
-
-Çalıştırıldığında aynı dizine sbot.m3u dosyasını oluşturur.
-
-🔁 Otomatikleştirme (Android)
-
-1. Pydroid 3 ile sbot.py dosyasını /storage/emulated/0/Pydroid3/scripts/ klasörüne koy
-2. Macrodroid ile zamanlayıcı kur:
-   - Trigger: Saat (örneğin her gün 14:00)
-   - Action: Shell komutu
-     `bash
-     python3 /storage/emulated/0/Pydroid3/scripts/sbot.py
-     `
-
-📡 Yayın Linki Paylaşımı
-
-Oluşan sbot.m3u dosyasını GitHub’a yükleyerek şu şekilde paylaşabilirsin:
-
-`
-https://raw.githubusercontent.com/KULLANICI_ADIN/sbot/main/sbot.m3u
-`
-
-> KULLANICI_ADIN kısmını kendi GitHub kullanıcı adınla değiştir.
-
-`
-
-5. Sayfanın altına bir commit mesajı yaz:  
-   `
-   add README.md
